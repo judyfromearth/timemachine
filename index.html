@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>시간 여행 포털</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="time-machine-container">
+        <!-- Background -->
+        <div class="time-machine-background">
+            <div class="radial-bg"></div>
+            <div class="spinning-ring ring-1"></div>
+            <div class="spinning-ring ring-2"></div>
+            <div class="scanner-lines"></div>
+            <div class="hexagon hexagon-1"></div>
+            <div class="hexagon hexagon-2"></div>
+        </div>
+        
+        <!-- Main Content Container -->
+        <div class="content-container">
+            <!-- Header -->
+            <div class="header">
+                <h1 class="title">시간 여행 포털</h1>
+                <div class="status-indicator">
+                    <div class="status-light"></div>
+                    <span>타임코드 인증 필요</span>
+                    <div class="status-light"></div>
+                </div>
+                <p class="subtitle">
+                    시간축 이동을 위한 타임코드를 입력해주세요.
+                </p>
+            </div>
+            
+            <!-- Password Form -->
+            <form id="timeCodeForm">
+                <div class="input-container">
+                    <input
+                        type="text"
+                        id="timeCodeInput"
+                        class="input-field"
+                        placeholder="YYYY-MM-DD-HH:MM"
+                        maxlength="16"
+                    />
+                </div>
+                
+                <button
+                    type="submit"
+                    id="submitButton"
+                    class="submit-button"
+                >
+                    <span>타임코드 인증</span>
+                    <i class="ri-portal-line submit-icon"></i>
+                </button>
+            </form>
+            
+            <!-- Result Message Container -->
+            <div id="resultContainer"></div>
+            
+            <!-- System Status -->
+            <div class="system-status">
+                <div>
+                    <i class="ri-database-2-line"></i>
+                    <span id="timeCoordDisplay"> T-COORD: 0000-00-00-00:00</span>
+                </div>
+                <div id="systemStatusContainer">
+                    <span id="systemStatus">SYS: READY</span>
+                    <i class="ri-shut-down-line"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            &copy; 3025 타임트래블 시스템 v1.0
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
